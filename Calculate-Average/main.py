@@ -1,13 +1,14 @@
-def count(P, Q):
-    return P + Q
+num_1 = int (input("enter first no: "))
+num_2 = int (input("enter second no: "))
+num_3 = int (input("enter third no: "))
 
-average = 0
+add = num_1 + num_2 + num_3
+print("Addition is: ", add)
 
-print("Welcome to average calculator")
+average = add / 12
 
-num_1 = int (input("Please enter your average of the first trimester: "))
-num_2 = int (input("Please enter your average of the second trimester: "))
-num_3 = int (input("Please enter your average of the third trimester: "))
-
-if (num_1, num_2, num_3):
-    print(num_1 + num_2 + num_3, count )
+if (average < 10):
+    print ("You didn't succed")
+    print("Your average is: ", average)
+elif (average > 10):
+    print("You succed with average of ", average)
