@@ -5,7 +5,7 @@ num_3 = int (input("enter third no: "))
 add = num_1 + num_2 + num_3
 print("Addition is: ", add)
 
-average = add / 12
+average = add / 10
 
 if (average < 10):
     print ("You didn't succed")
