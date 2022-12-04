@@ -1,3 +1,5 @@
+# You can try it on the terminal
+
 num_1 = int (input("enter no: "))
 num_2 = int (input("enter no: "))
 num_3 = int (input("enter no: "))
