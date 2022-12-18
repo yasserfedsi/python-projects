@@ -1,3 +1,3 @@
-import turtle as T
+import turtle
 
-T.forward(10)
+t = turtle.Turtle
