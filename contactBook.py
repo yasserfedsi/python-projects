@@ -23,3 +23,26 @@ class ContactBook:
         for contact in self.contacts:
             if contact.name.lower() == name.lower():
                 print("-- Contact Found --")
+                print(f"Name: {contact.name}")
+                print(f"Phone: {contact.phone_number}")
+                print(f"Email: {contact.email}")
+                return
+        print("Contact not found.")
+
+    def delete_contact(self, name):
+        for contact in self.contacts:
+            if contact.name.lower() == name.lower():
+               self.contacts.remove(contact)
+               return
+        print("Contact not found.")
+
+def main():
+    contact_book = ContactBook
+    
+    while True:
+        print("======Conatct Book======")
+        print("1. Add contact")
+        print("2. Display contacts")
+        print("3. Search contact.")
+        print("4. Delete contact.")
+        print("5. Exit")
