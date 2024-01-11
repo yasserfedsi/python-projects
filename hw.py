@@ -1,24 +1,23 @@
-# Part 1 : Initializing the system
+# Part 1: Initializing the system
 
-# Valide password
+# Validate password
 def validPassword(password):
     return len(password) >= 5
 
-
-# Valid email
+# Validate email
 def validEmail(email):
-    return email.lower().endWith('@gmail.com') or email.lower().endsWith('@brainerx.com')
+    return email.lower().endswith('@gmail.com') or email.lower().endswith('@brainerx.com')
 
 # Add user
 def addUser(userList, email, password):
     if not validPassword(password):
-        print("Password must contain at least 5 charachters")
+        print("Password must contain at least 5 characters")
         return
 
     if not validEmail(email):
-        print("Invalid email format. Email must end with '@gmail.com' or '@brainerx.com' ")
+        print("Invalid email format. Email must end with '@gmail.com' or '@brainerx.com'")
         return
-    
+
     user = {
         "Email": email,
         "Password": password
@@ -51,7 +50,7 @@ def modifyUser(userList, email, newEmail, newPassword):
             user["Password"] = newPassword
             print(f"User with email '{email}' modified successfully.")
             return
-    print(f"User with email '{email}' not found. ")
+    print(f"User with email '{email}' not found.")
 
 # Display Users
 def displayUsers(userList):
@@ -64,7 +63,7 @@ def main():
     userList = []
     while True:
         print("============Welcome to FindX============")
-        print("\nChoose one of this functions: ")
+        print("\nChoose one of these functions:")
         print("1. Add a user.")
         print("2. Search for a user.")
         print("3. Delete a user.")
@@ -80,12 +79,12 @@ def main():
         elif choice == "2":
             email = input("Enter user email to search for: ")
             user = searchUser(userList, email)
-            if user == True:
-                 print(f"User found: Email: {user['Email']}, Password: {user['Password']}")
+            if user is not None:
+                print(f"User found: Email: {user['Email']}, Password: {user['Password']}")
             else:
                 print("User not found!")
         elif choice == "3":
-            email = input("Enter user email to delete")
+            email = input("Enter user email to delete: ")
             deleteUser(userList, email)
         elif choice == "4":
             email = input("Enter user email to modify: ")
@@ -100,8 +99,5 @@ def main():
         else:
             print("Invalid choice! Please try a correct function.")
 
-
-        
-    
 if __name__ == "__main__":
     main()
